@@ -4,9 +4,14 @@ import java.util.List;
 
 public class Lion {
 
+    //объявляем непубличный экземпляр класса Feline, но не присваеваем ему значение, чтобы изолировать Feline от Lion
+    private Feline feline;
     boolean hasMane;
 
-    public Lion(String sex) throws Exception {
+    //теперь конструктор принимает экземпляр класса Feline как параметр
+    public Lion(String sex, Feline feline) throws Exception {
+        //добавляем ключевое слово this, тк у переменных feline одинаковые имена
+        this.feline = feline;
         if ("Самец".equals(sex)) {
             hasMane = true;
         } else if ("Самка".equals(sex)) {
@@ -15,8 +20,8 @@ public class Lion {
             throw new Exception("Используйте допустимые значения пола животного - самей или самка");
         }
     }
-
-    Feline feline = new Feline();
+    //это объявление более не нужно, его закомментируем
+    //Feline feline = new Feline();
 
     public int getKittens() {
         return feline.getKittens();
