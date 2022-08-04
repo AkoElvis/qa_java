@@ -3,7 +3,6 @@ package com.example;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
@@ -22,6 +21,7 @@ public class FelineKittenParametersTest {
         return new Object[][]{
                 {-1, -1},
                 {0, 0},
+                {1, 1},
                 {2, 2},
                 {-2, -2},
                 {2147483647, 2147483647},
@@ -35,6 +35,6 @@ public class FelineKittenParametersTest {
     public void checkGetKittensReturnsTheEnteredNumber() {
         Feline feline = new Feline();
         int actual = feline.getKittens(checked);
-        assertEquals(expected, checked);
+        assertEquals(expected, actual);
     }
 }
