@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import static org.junit.Assert.assertEquals;
 
+//запускаем тест с параметризацией
 @RunWith(Parameterized.class)
 
 public class LionDoesHaveManeParametersTest {
@@ -16,7 +17,7 @@ public class LionDoesHaveManeParametersTest {
         this.sex = sex;
         this.expected = expected;
     }
-
+    //прописываем тестовые данные
     @Parameterized.Parameters
     public static Object[][] getSex() {
         return new Object[][]{
@@ -25,6 +26,7 @@ public class LionDoesHaveManeParametersTest {
         };
     }
 
+    //проверяем, что метод doesHaveMane(), выполненный для объекта с корректными параметрами, вернет корректный ответ true/false
     @Test
     public void checkDoesHaveManeReturnsCorrectValue() throws Exception {
         Lion lion = new Lion(sex, feline);

@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import static org.junit.Assert.assertEquals;
 
+//запускаем тест с параметризацией
 @RunWith(Parameterized.class)
 public class FelineKittenParametersTest {
 
@@ -16,6 +17,7 @@ public class FelineKittenParametersTest {
         this.expected = expected;
     }
 
+    //прописываем тестовые данные по ГЗ
     @Parameterized.Parameters
     public static Object[][] getKittensData() {
         return new Object[][]{
@@ -31,6 +33,7 @@ public class FelineKittenParametersTest {
         };
         }
 
+    //проверяем что метод getKittens(), выполненный с параметром, возвращает сам параметр
     @Test
     public void checkGetKittensReturnsTheEnteredNumber() {
         Feline feline = new Feline();

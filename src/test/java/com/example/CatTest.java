@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 
 public class CatTest {
 
+    //проверяем что метод getSound() для Cat возвращает "Мяу"
     @Test
     public void checkGetSoundCatReturnsMeow() {
         Feline feline = new Feline();
@@ -16,6 +17,7 @@ public class CatTest {
         assertEquals(expectedSound, actualSound);
     }
 
+    //проверяем что метод getFood для Cat возвращает список еды для "Хищник"
     @Test
     public void checkGetFoodCatListContainsMeat() throws Exception {
         Feline feline = new Feline();

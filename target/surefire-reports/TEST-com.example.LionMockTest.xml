@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="com.example.LionMockTest" time="1.062" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="com.example.LionMockTest" time="1.078" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.3.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -65,7 +65,7 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="com.example.LionMockTest" name="checkLionCreationIncorrectSexCorrectException" time="1.031"/>
-  <testcase classname="com.example.LionMockTest" name="checkGetFoodLionReturnsMeat" time="0.031"/>
+  <testcase classname="com.example.LionMockTest" name="checkGetFoodLionReturnsMeat" time="0.032"/>
   <testcase classname="com.example.LionMockTest" name="checkDoesHaveManeIncorrectValueCorrectException" time="0"/>
-  <testcase classname="com.example.LionMockTest" name="checkGetKittensLionDefaultReturnsOne" time="0"/>
+  <testcase classname="com.example.LionMockTest" name="checkGetKittensLionDefaultReturnsOne" time="0.015"/>
 </testsuite>

@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 
 public class FelineTest {
 
+    //проверяем что метод getFood() для Feline возвращает список еды для "Хищник"
     @Test
     public void checkGetFoodFelineReturnsMeat() throws Exception {
         Feline feline = new Feline();
@@ -15,6 +16,7 @@ public class FelineTest {
         assertEquals(expectedEatMeat, actualEatMeat);
     }
 
+    //проверяем что метод getFamily() для Feline возвразает "Кошачьи"
     @Test
     public void checkGetFamilyReturnsFeline() {
         Feline feline = new Feline();
@@ -23,6 +25,7 @@ public class FelineTest {
         assertEquals(expectedFamily, actualFamily);
     }
 
+    //проверяем что метод getKittens, выполненный без параметра, вернет 1 по умолчанию
     @Test
     public void checkGetKittensDefaultReturnsOne() {
         Feline feline = new Feline();

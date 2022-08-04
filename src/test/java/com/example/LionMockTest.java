@@ -12,6 +12,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
+//подключаем мокито
 @RunWith(MockitoJUnitRunner.class)
 
 public class LionMockTest {
@@ -19,12 +20,14 @@ public class LionMockTest {
     @Mock
     private Feline feline;
 
+    //проверяем что метод doesHaveMane(), выполненный для объекта с некорректными параметрами, вернет эксепшн
     @Test(expected = Exception.class)
     public void checkDoesHaveManeIncorrectValueCorrectException() throws Exception {
         Lion lion = new Lion(" ", feline);
         lion.doesHaveMane();
     }
 
+    //проверяем что при создании объекта с некорректными параметрами вернется эксепшн
     @Test(expected = AssertionError.class)
     public void checkLionCreationIncorrectSexCorrectException() throws AssertionError {
         try {
@@ -36,6 +39,7 @@ public class LionMockTest {
         }
     }
 
+    //проверяем что метод getFood() для Lion возвращает список еды для "Хищник"
     @Test
     public void checkGetFoodLionReturnsMeat() throws Exception {
         Lion lion = new Lion("Самец", feline);
@@ -45,6 +49,7 @@ public class LionMockTest {
         assertEquals(expectedEatMeat, actualEatMeat);
     }
 
+    //проверяем что метод getKittens, выполненный без параметра, вернет 1 по умолчанию
     @Test
     public void checkGetKittensLionDefaultReturnsOne() throws Exception {
         Lion lion = new Lion("Самец", feline);
