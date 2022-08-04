@@ -45,4 +45,13 @@ public class LionMockTest {
         assertEquals(expectedEatMeat, actualEatMeat);
     }
 
+    @Test
+    public void checkGetKittensLionDefaultReturnsOne() throws Exception {
+        Lion lion = new Lion("Самец", feline);
+        Mockito.when(feline.getKittens()).thenReturn(1);
+        int expected = 1;
+        int actual = lion.getKittens();
+        assertEquals(expected, actual);
+    }
+
 }

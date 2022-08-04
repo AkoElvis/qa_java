@@ -24,7 +24,7 @@ public class FelineTest {
     }
 
     @Test
-    public void checkGetKittensReturnsOne() {
+    public void checkGetKittensDefaultReturnsOne() {
         Feline feline = new Feline();
         int expectedNumberOfKittens = 1;
         int actualNumberOfKittens = feline.getKittens();
